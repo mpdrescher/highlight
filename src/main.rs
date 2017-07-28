@@ -3,8 +3,7 @@ extern crate regex;
 
 use term::{
     color,
-    Terminal,
-    Attr
+    Terminal
 };
 
 use regex::Regex;
@@ -108,8 +107,7 @@ fn print_line(term: &mut StdoutTerminal, regex: &Regex, line: String) -> IOResul
         match i_ch {
             (index, ch) => {
                 if highlights.iter().any(|x| x.contains(index)) {
-                    term.attr(Attr::Reverse)?;
-                    term.fg(color::GREEN)?;
+                    term.bg(color::RED)?;
                 }
                 else {
                     term.reset()?;
