@@ -7,3 +7,10 @@ Build:
 $ cargo build --release
 
 Regexes are according to https://doc.rust-lang.org/regex/regex/index.html
+
+Usage:
+
+$ highlight <regex> [files]...
+
+If no files are provided, the input will be read from stdin.
+(-> piping into 'highlight' is possible)
