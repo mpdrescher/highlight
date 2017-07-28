@@ -1,0 +1,9 @@
+highlight
+=========
+
+Colorize a regex in terminal text, because Select-String (PowerShell) does not have this. Cross-platform.
+
+Build:
+$ cargo build --release
+
+Regexes are according to https://doc.rust-lang.org/regex/regex/index.html
