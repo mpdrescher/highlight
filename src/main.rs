@@ -22,7 +22,11 @@ use std::boxed::Box;
 
 fn main() {
     let mut args = env::args().skip(1).rev().collect::<Vec<String>>();
-    if args.len() < 1 {
+    if args.len() == 0 {
+        print_help();
+        return;
+    }
+    if args.get(0).unwrap() == "--help" || args.get(0).unwrap() == "-h" {
         print_help();
         return;
     }
